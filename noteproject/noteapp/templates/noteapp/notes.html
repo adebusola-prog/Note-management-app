@@ -1,0 +1,14 @@
+{% extends 'noteapp/index.html' %}
+{% block content %}
+
+{% for note in notes %}
+
+<h4>{{note.title}}</h4>
+<a href="{% url 'detail_note' note.pk %}">{{note.text|truncatechars:30}}</a>{{note.created_time}}
+<!-- <a href= "/detail_note/{{ note.id }}/">{{note.text}} -->
+<p style="color:Tomato;">{{note.kategory}}</p>
+<hr>
+
+{% endfor %}
+<!-- http://127.0.0.1:4000/detail_note/1"<a href="http://127.0.0.1:4000/detail_note/1">view link</a> -->
+{% endblock %}

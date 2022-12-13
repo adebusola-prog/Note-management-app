@@ -1,0 +1,10 @@
+{% extends 'noteapp/index.html' %}
+{% block content %}
+{% for cat in categories %}
+<a href="{% url 'category_note' cat.id %}"><li>{{ cat.name}}</li></a>
+{% endfor %}
+
+{% endblock %}
+
+
+

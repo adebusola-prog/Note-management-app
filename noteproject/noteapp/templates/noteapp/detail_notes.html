@@ -1,0 +1,18 @@
+{% extends 'noteapp/index.html' %}
+{% block content %}
+<ul>
+   <li><h4>Title:{{detail_note.title}}</h4></li>
+   <li>Text: {{detail_note.text}}</li>
+   <img src="{{detail_note.image_URL}}" width="240px">
+   <li>Time_created: {{detail_note.created_time}}</li>
+   <li>Last_updated: {{detail_note.updated_time}}</li>
+   <br>
+   <a href="{{ detail_note.pdf.url }}" class="btn btn-primary btn-sm">View PDF</a>
+   <li>Is_pin: {{detail_note.is_pin}}</li>
+   <li><h4>Category: {{detail_note.kategory}}</h4></li>
+   <a href="{% url 'notes' %}">Share link</a>
+</ul>
+<a href="{% url 'note_update' detail_note.pk %}">Edit Note</a>
+<a href="{% url 'note_delete' detail_note.pk %}">Delete Note</a>
+
+{% endblock %}

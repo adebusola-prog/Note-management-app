@@ -1,0 +1,18 @@
+{% extends 'noteapp/index.html' %}
+{% block content %}
+<h4>Notes in the Trash</h4>
+{% for trash in trash_note %}
+
+<h2>Title:</h2>{{trash.title}}
+
+<h2>Body:</h2>{{trash.text}}
+<h2>Category:</h2><h5>{{trash.kategory}}</h5>
+<li>{{trash.created_time }}</li>
+<a href="{% url 'note_restore' trash.pk %}">Restore Note</a>
+<a href="{% url 'delete_note_perm' trash.pk %}">Delete Note permanently</a>
+
+{% empty %}
+<h6>Your Trash is empty</h6>
+{% endfor %}
+
+{% endblock %}

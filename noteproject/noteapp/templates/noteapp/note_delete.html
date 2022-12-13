@@ -1,0 +1,11 @@
+{% extends 'noteapp/index.html' %}
+{% block content%}
+<h1>Delete note</h1>
+
+<p>Are you sure you want to delete the note {{ note }}?</p>
+<a href="{{ request.META.HTTP_REFERER }}">Go Back</a>
+<form action="" method="POST">
+   {% csrf_token %}
+   <input type="submit" value="Yes, delete."/>
+</form>
+{% endblock %}

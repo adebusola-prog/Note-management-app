@@ -1,0 +1,13 @@
+{% extends 'noteapp/index.html' %}
+
+{% block content %}
+
+{% for cat in category.note_set.all %}
+   <li>{{ cat.text }}</li>
+   <li>{{ cat.title }}</li>
+   <li>{{ cat.created_time }}</li>
+<hr>
+{% endfor %}
+
+{% endblock %}
+

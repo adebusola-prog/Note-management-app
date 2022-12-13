@@ -1,0 +1,20 @@
+{% extends 'noteapp/index.html' %}
+{% load static %}
+{% block content %}
+{% for user in user_profile %}
+
+<h2>Username: {{user.username}}</h2>
+<img src="{{user.imageURL}}" width="240px">
+<h2>First Name: {{user.first_name}}</h2>
+
+<h2>Last Name: {{user.last_name}}</h2>
+
+<h2>Email: {{user.email}}</h2>
+
+
+
+{% endfor %}
+
+
+<a href="{% url 'user_update' %}">Update Profile</a>
+{% endblock %}

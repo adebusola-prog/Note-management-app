@@ -1,0 +1,13 @@
+.thumbnail{
+	width: 50%;
+	height: 200px;
+	-webkit-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    -moz-box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+    box-shadow: -1px -3px 5px -2px rgba(214,214,214,1);
+}
+
+.form {
+   width: 300px;
+   margin: 0 auto;
+   align:"center";
+}

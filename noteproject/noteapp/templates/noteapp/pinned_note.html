@@ -1,0 +1,11 @@
+{% extends 'noteapp/index.html' %}
+{% block content %}
+
+{% for note in pinned_note %}
+<h2>Title:</h2>{{note.title}}
+<h2>Body:</h2>{{note.text}}
+<h2>Category:</h2><h5>{{note.kategory}}</h5>
+<li>{{note.created_time }}</li>
+{% endfor %}
+
+{% endblock %}
